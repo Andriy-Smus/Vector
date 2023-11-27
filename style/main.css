@@ -1345,11 +1345,12 @@ header .outer-indent .main-bottom-menu ul li:not(:last-child) a::after {
   color: #fff;
   font-family: "MuseoSans";
 }
-.outer-indent#footer .main-footer-form-wrapper .form-group .has-error input {
+.outer-indent#footer .main-footer-form-wrapper .form-group .has-error {
   border-color: #ff0000;
 }
-.outer-indent#footer .main-footer-form-wrapper .form-group .has-error .help-block {
+.outer-indent#footer .main-footer-form-wrapper .form-group .error-name, .outer-indent#footer .main-footer-form-wrapper .form-group .error-email {
   color: #ff0000;
+  display: none;
 }
 .outer-indent#footer .main-footer-form-wrapper button[type=submit] {
   height: 70px;
@@ -1826,6 +1827,27 @@ body.loaded .outer-indent#about-company .about-company-block.inview .about-compa
   .outer-indent#footer .first-footer .main-footer-form-wrapper .footer-form-title {
     font-size: 50px;
   }
+  .outer-indent#footer .first-footer .main-footer-form-wrapper .form-group input {
+    height: 34px;
+    font-size: 16px;
+  }
+  .outer-indent#footer .first-footer .main-footer-form-wrapper .form-group label {
+    font-size: 21px;
+    margin-bottom: 10px;
+  }
+  .outer-indent#footer .first-footer .main-footer-form-wrapper button[type=submit] {
+    height: 55px;
+    padding: 0 60px 0 30px;
+  }
+  .outer-indent#footer .first-footer .main-footer-form-wrapper button[type=submit] .line {
+    width: 20px;
+  }
+  .outer-indent#footer .first-footer .main-footer-form-wrapper button[type=submit] .line::before {
+    width: 9px;
+  }
+  .outer-indent#footer .first-footer .main-footer-form-wrapper button[type=submit] .line::after {
+    width: 9px;
+  }
 }
 @media (max-width: 1050px) {
   header .side-menu .menu-container .menu-logo-holder img {
@@ -1955,11 +1977,24 @@ body.loaded .outer-indent#about-company .about-company-block.inview .about-compa
   .outer-indent#footer .first-footer .main-footer-form-wrapper .footer-form-title {
     font-size: 38px;
   }
+  .outer-indent#footer .first-footer .main-footer-form-wrapper button[type=submit] {
+    height: 45px;
+    font-size: 16px;
+  }
 }
 @media (min-width: 960px) {
   .uk-h1,
   h1 {
     font-size: 2.625rem;
+  }
+}
+@media (max-width: 959px) {
+  .outer-indent#footer .second-footer {
+    flex-direction: column;
+  }
+  .second-footer > *:not(:last-child) {
+    margin-bottom: 15px;
+    max-width: 100% !important;
   }
 }
 @media (max-width: 800px) {
@@ -2125,6 +2160,12 @@ body.loaded .outer-indent#about-company .about-company-block.inview .about-compa
   .outer-indent#footer {
     padding: 20px;
   }
+  .outer-indent#footer .second-footer {
+    padding: 20px;
+  }
+  .outer-indent#footer .second-footer .footer-logo-wrapper {
+    width: 100px;
+  }
 }
 @media (max-width: 630px) {
   header .sticky-header .left-position {
@@ -2143,6 +2184,12 @@ body.loaded .outer-indent#about-company .about-company-block.inview .about-compa
   }
   .vector-block.reverse .vector-title {
     letter-spacing: 0;
+  }
+  .outer-indent#footer .second-footer .footer-copy-wrapper {
+    font-size: 15px;
+  }
+  .outer-indent#footer .second-footer .footer-logo-wrapper {
+    width: 80px;
   }
 }
 @media (max-width: 550px) {
@@ -2293,6 +2340,15 @@ body.loaded .outer-indent#about-company .about-company-block.inview .about-compa
   .outer-indent#footer .first-footer .main-footer-form-wrapper .footer-form-title {
     margin-bottom: 35px;
   }
+  .outer-indent#footer .first-footer .main-footer-form-wrapper .button-wrapper {
+    width: 100%;
+    text-align: center;
+  }
+  .outer-indent#footer .second-footer .footer-copy-wrapper {
+    font-size: 15px;
+    line-height: 18px;
+    max-width: 65%;
+  }
 }
 @media (max-width: 380px) {
   header .side-menu .menu-container .menu-items-holder ul li:not(:last-child) {
@@ -2364,5 +2420,16 @@ body.loaded .outer-indent#about-company .about-company-block.inview .about-compa
   .outer-indent#footer .first-footer .main-footer-form-wrapper .footer-form-title {
     font-size: 30px;
     margin-bottom: 15px;
+  }
+  .outer-indent#footer .second-footer {
+    padding: 10px;
+    padding-top: 23px;
+  }
+  .outer-indent#footer .second-footer .footer-copy-wrapper {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .outer-indent#footer .second-footer .footer-logo-wrapper {
+    width: 70px;
   }
 }/*# sourceMappingURL=main.css.map */

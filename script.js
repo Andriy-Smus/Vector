@@ -65,20 +65,26 @@ const observer = new IntersectionObserver((entries) => {
 
 observer.observe(vectorImgContainer);
 
-// function toggleSliderNavVisibility() {
-//   const sliderNav = document.querySelector('.vector-slider-nav');
-//   if (window.innerWidth < 800) {
-//       sliderNav.classList.remove('uk-hidden');
-//   } else {
-//       sliderNav.classList.add('uk-hidden');
-//   }
-// }
+function validateForm() {
+  let name = document.getElementById('contactform-name').value;
+  let email = document.getElementById('contactform-email').value;
 
-// // Викликаємо функцію при завантаженні сторінки
-// toggleSliderNavVisibility();
+  if (name.trim() === '') {
+      document.querySelector('.error-name').style.display = 'block';
+      document.querySelector('.error-name')
+      return false;
+  } else {
+      document.querySelector('.error-name').style.display = 'none';
+  }
 
-// // Викликаємо функцію при зміні розміру вікна
-// window.addEventListener('resize', toggleSliderNavVisibility);
+  if (email.trim() === '') {
+      document.querySelector('.error-email').style.display = 'block';
+      return false;
+  } else {
+      document.querySelector('.error-email').style.display = 'none';
+  }
 
+  return true;
+}
 
 

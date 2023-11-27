@@ -448,7 +448,8 @@
                     <div class="uk-width-1-1 uk-width-1-2@m">
                         <div class="main-footer-form-wrapper">
                             <div class="footer-form-title">Зв'язатись з нами</div>
-                            <form id="w0" action="/" method="post" enctype="multipart/form-data">
+                            <form id="w0" action="/" method="post" enctype="multipart/form-data" onsubmit="return validateForm()">
+
                                 <input type="hidden" name="_csrf"
                                     value="wmUZPJ2rS8xey_eI0x8VaipwjfkAwS9dMp-cmdI5AcKWXFhs8vImuw2hwMSRWFYoTijKiWaobhFY0KuuqldytQ==">
                                 <div class="uk-grid-large uk-grid" uk-grid="">
@@ -457,7 +458,7 @@
                                             <label class="control-label" for="contactform-name">Ім'я</label>
                                             <input type="text" id="contactform-name" class="form-control"
                                                 name="ContactForm[name]" placeholder="Ваше ім'я" aria-required="true">
-                                            <div class="help-block"></div>
+                                                <div class="error-name">Необхідно заповнити "Імя".</div>
                                         </div>
                                     </div>
         
@@ -466,7 +467,7 @@
                                             <label class="control-label" for="contactform-email">Email</label>
                                             <input type="text" id="contactform-email" class="form-control"
                                                 name="ContactForm[email]" placeholder="Ваша Email адреса" aria-required="true">
-                                            <div class="help-block"></div>
+                                            <div class="error-email">Необхідно заповнити "Email".</div>
                                         </div>
                                     </div>
         

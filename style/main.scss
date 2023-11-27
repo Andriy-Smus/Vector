@@ -1318,11 +1318,12 @@ header {
                 color: #fff;
                 font-family: 'MuseoSans';
             }
-            .has-error input {
+            .has-error {
                 border-color: #ff0000;
             }
-            .has-error .help-block {
+            .error-name, .error-email {
                 color: #ff0000;
+                display: none;
             }
         }
         button[type="submit"] {
@@ -1821,6 +1822,29 @@ body.loaded .outer-indent#about-company .about-company-block.inview {
                 .footer-form-title {
                     font-size: 50px;
                 }
+                .form-group {
+                    input {
+                        height: 34px;
+                        font-size: 16px;
+                    }
+                    label {
+                        font-size: 21px;
+                        margin-bottom: 10px;
+                    }
+                }
+                button[type="submit"] {
+                    height: 55px;
+                    padding: 0 60px 0 30px;
+                    .line {
+                        width: 20px;
+                    }
+                    .line::before {
+                        width: 9px;
+                    }
+                    .line::after {
+                        width: 9px;
+                    }
+                }
             }
         }
     }
@@ -1981,6 +2005,10 @@ body.loaded .outer-indent#about-company .about-company-block.inview {
                 .footer-form-title {
                     font-size: 38px;
                 }
+                button[type="submit"] {
+                    height: 45px;
+                    font-size: 16px;
+                }
             }
         }
     }
@@ -1990,6 +2018,16 @@ body.loaded .outer-indent#about-company .about-company-block.inview {
     .uk-h1,
     h1 {
         font-size: 2.625rem;
+    }
+}
+
+@media (max-width: 959px) {
+    .outer-indent#footer .second-footer {
+        flex-direction: column;
+    }
+    .second-footer > *:not(:last-child) {
+        margin-bottom: 15px;
+        max-width: 100% !important;
     }
 }
 
@@ -2167,6 +2205,12 @@ body.loaded .outer-indent#about-company .about-company-block.inview {
 
     .outer-indent#footer {
         padding: 20px;
+        .second-footer {
+            padding: 20px;
+            .footer-logo-wrapper {
+                width: 100px;
+            }
+        }
     }
 }
 
@@ -2191,6 +2235,16 @@ body.loaded .outer-indent#about-company .about-company-block.inview {
     .vector-block.reverse {
         .vector-title {
             letter-spacing: 0;
+        }
+    }
+    .outer-indent#footer {
+        .second-footer {
+            .footer-copy-wrapper {
+                font-size: 15px;
+            }
+            .footer-logo-wrapper {
+                width: 80px;
+            }
         }
     }
 }
@@ -2354,7 +2408,16 @@ body.loaded .outer-indent#about-company .about-company-block.inview {
                 .footer-form-title {
                     margin-bottom: 35px;
                 }
+                .button-wrapper {
+                    width: 100%;
+                    text-align: center;
+                }
             }
+        }
+        .second-footer .footer-copy-wrapper {
+            font-size: 15px;
+            line-height: 18px;
+            max-width: 65%;
         }
     }
 }
@@ -2471,6 +2534,17 @@ body.loaded .outer-indent#about-company .about-company-block.inview {
                     font-size: 30px;
                     margin-bottom: 15px;
                 }
+            }
+        }
+        .second-footer {
+            padding: 10px;
+            padding-top: 23px;
+            .footer-copy-wrapper {
+                font-size: 14px;
+                line-height: 16px;
+            }
+            .footer-logo-wrapper {
+                width: 70px;
             }
         }
     }
