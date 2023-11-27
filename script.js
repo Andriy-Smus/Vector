@@ -12,6 +12,14 @@ document.querySelectorAll('.hamburger').forEach(block => {
 document.querySelector('.menu-close-button-wrapper').addEventListener('click', function() {
   document.querySelector('.side-menu').classList.remove('active');
 });
+
+let chapters = document.querySelectorAll('.chapter');
+chapters.forEach(function(chapter) {
+  chapter.addEventListener('click', function() {
+    document.querySelector('.side-menu').classList.remove('active');
+  });
+});
+
 document.addEventListener('click', function(event) {
   const menuContainer = document.querySelector('.menu-container');
   const sideMenu = document.querySelector('.side-menu');
