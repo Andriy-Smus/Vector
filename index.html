@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Vector8</title>
     <link rel="stylesheet" href="style/main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.16.22/dist/css/uikit.min.css" />
@@ -300,9 +300,9 @@
                                         </div>
                                         <div class="item-number">01</div>
                                         <div class="item-title">Проект «Jack House»</div>
-                                        <a class="detail-link-layer" href="/projects/Jackhouse">
+                                        <a class="detail-link-layer" href="#footer" uk-scroll="offset: 70">
                                             <span class="link-arrow"></span>
-                                            <span class="link-text">переглянути проєкт</span>
+                                            <span class="link-text">детальніше про проект</span>
                                         </a>
                                     </div>
                                 </li>
@@ -313,9 +313,9 @@
                                         </div>
                                         <div class="item-number">02</div>
                                         <div class="item-title">Проект «Exotic fusion»</div>
-                                        <a class="detail-link-layer" href="/projects/Exotic">
+                                        <a class="detail-link-layer" href="#footer" uk-scroll="offset: 70">
                                             <span class="link-arrow"></span>
-                                            <span class="link-text">переглянути проєкт</span>
+                                            <span class="link-text">детальніше про проект</span>
                                         </a>
                                     </div>
                                 </li>
@@ -326,9 +326,9 @@
                                         </div>
                                         <div class="item-number">03</div>
                                         <div class="item-title">Проект «Modern minimalist»</div>
-                                        <a class="detail-link-layer" href="/projects/minimalist">
+                                        <a class="detail-link-layer" href="#footer" uk-scroll="offset: 70">
                                             <span class="link-arrow"></span>
-                                            <span class="link-text">переглянути проєкт</span>
+                                            <span class="link-text">детальніше про проект</span>
                                         </a>
                                     </div>
                                 </li>
@@ -342,7 +342,7 @@
                     </div>
                 </div>
                 <div class="vector-block-button-wrapper">
-                    <a href="/projects" class="link-with-line">дивитись роботи <span class="line-in-link"></span></a>
+                    <a href="#footer" uk-scroll="offset: 70" class="link-with-line">дізнатись більше <span class="line-in-link"></span></a>
                 </div>
             </div>
         </section>
@@ -450,6 +450,12 @@
                             <div class="footer-form-title">Зв'язатись з нами</div>
                             <form id="w0" enctype="multipart/form-data" onsubmit="return validateForm()">
 
+                                <!-- Hidden Required Fields -->
+                                <input type="hidden" name="project_name" value="Vector7">
+                                <input type="hidden" name="admin_email" value="smus.andriy@gmail.com">
+                                <input type="hidden" name="form_subject" value="Form footer">
+                                <!-- END Hidden Required Fields -->
+
                                 <input type="hidden" name="_csrf"
                                     value="wmUZPJ2rS8xey_eI0x8VaipwjfkAwS9dMp-cmdI5AcKWXFhs8vImuw2hwMSRWFYoTijKiWaobhFY0KuuqldytQ==">
                                 <div class="uk-grid-large uk-grid" uk-grid="">
@@ -510,6 +516,7 @@
     <!-- <script src="/js/public.js"></script> -->
     <!-- <script src="/js/main-menu.js"></script> -->
     <!-- <script src="/js/preloader.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="script.js"></script>
     <!-- <script>jQuery(function ($) {
             jQuery('#w0').yiiActiveForm([{ "id": "contactform-name", "name": "name", "container": ".field-contactform-name", "input": "#contactform-name", "validate": function (attribute, value, messages, deferred, $form) { yii.validation.required(value, messages, { "message": "Необхідно заповнити \"Імя\"." }); } }, { "id": "contactform-email", "name": "email", "container": ".field-contactform-email", "input": "#contactform-email", "validate": function (attribute, value, messages, deferred, $form) { yii.validation.required(value, messages, { "message": "Необхідно заповнити \"Email\"." }); yii.validation.email(value, messages, { "pattern": /^[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$/, "fullPattern": /^[^@]*<[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?>$/, "allowName": false, "message": "Значення \u0022Email\u0022 не є правильною email адресою.", "enableIDN": false, "skipOnEmpty": 1 }); } }, { "id": "contactform-message", "name": "message", "container": ".field-contactform-message", "input": "#contactform-message", "validate": function (attribute, value, messages, deferred, $form) { value = yii.validation.trim($form, attribute, [], value); } }], []);
