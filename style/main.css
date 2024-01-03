@@ -387,7 +387,7 @@ header .outer-indent .main-banner .banner-right-column .slider-container .uk-sli
   -webkit-tap-highlight-color: transparent;
 }
 header .outer-indent .main-banner .banner-right-column .slider-container .uk-slider-container {
-  overflow: hidden;
+  overflow: visible;
 }
 header .outer-indent .main-banner .banner-right-column .slider-container div {
   padding-left: 40px;
