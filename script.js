@@ -117,6 +117,15 @@ function validateForm() {
   // 	});
 
   // });
+  document.getElementById('w0').addEventListener('submit', function (e) {
+    e.preventDefault(); // Зупинка стандартної поведінки форми
+    if (validateForm()) {
+      // Ваш код для відправки даних форми або виклику Ajax-запиту
+      // Наприклад, виклик функції, яка відправляє дані на сервер
+      // sendFormData();
+      this.reset();
+    }
+  });
 
 const translateEN = document.querySelectorAll('.translate-en');
 const translateUA = document.querySelectorAll('.translate-ua');
