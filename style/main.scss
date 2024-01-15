@@ -205,27 +205,31 @@ header {
                     margin-bottom: 45px;
                 }
             }
-            .menu-socials-holder ul {
-                padding: 0;
-                margin: 0;
-                list-style: none;
+            .menu-socials-holder{
                 display: flex;
-                li {
-                    opacity: 0;
-                    transform: translateX(-100%);
-                    transition: .3s;
-                    a {
-                        color: #fff;
+                justify-content: space-between;
+                ul {
+                    padding: 0;
+                    margin: 0;
+                    list-style: none;
+                    display: flex;
+                    li {
+                        opacity: 0;
+                        transform: translateX(-100%);
                         transition: .3s;
+                        a {
+                            color: #fff;
+                            transition: .3s;
+                        }
+                        a:hover {
+                            transform: scale(1.2);
+                        }
                     }
-                    a:hover {
-                        transform: scale(1.2);
+                    li:not(:last-child) {
+                        margin-right: 30px;
                     }
                 }
-                li:not(:last-child) {
-                    margin-right: 30px;
-                }
-            }
+            } 
             .menu-close-button-wrapper {
                 position: absolute;
                 top: 70px;
@@ -260,6 +264,35 @@ header {
                 transform: translateX(0%);
                 transition-delay: 1.3s;
             }
+            .languages {
+                list-style-type: none;
+                padding: 0 0 0 30px;
+                li {
+                    display: inline-block;
+                    .translate-en, .translate-ua {
+                        cursor: pointer;
+                        width: 40px;
+                        border: none;
+                        background: none;
+                        color: #939391;
+                        font-family: "MuseoSansCyrl-900";
+                        background: linear-gradient(45deg, #fff 0%, #fff 50%, #939391 50%, #939391 100%);                        
+                        background-size: 220% auto;
+                        background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        background-position: 100% center;
+                    }
+                    .translate-en:hover, .translate-ua:hover {
+                        background-position: 0% center;
+                    }
+                    .translate-active {
+                        background-position: 0% center;
+                    }
+                }
+                li:not(:last-child) {
+                    margin-right: 20px;
+                }
+            }     
             .menu-close-button-wrapper {
                 opacity: 1;
                 transform: translateX(0%);
@@ -341,6 +374,33 @@ header {
                 flex-direction: column;
                 justify-content: space-between;
                 transition-delay: .2s;
+                .languages {
+                    list-style-type: none;
+                    padding: 0 0 0 30px;
+                    li {
+                        display: inline-block;
+                        .translate-en, .translate-ua {
+                            cursor: pointer;
+                            font-size: 18px;
+                            width: 45px;
+                            border: none;
+                            background: none;
+                            color: #939391;
+                            font-family: "MuseoSansCyrl-900";
+                            background: linear-gradient(45deg, #fff 0%, #fff 50%, #939391 50%, #939391 100%);                        
+                            background-size: 220% auto;
+                            background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            background-position: 100% center;
+                        }
+                        .translate-en:hover, .translate-ua:hover {
+                            background-position: 0% center;
+                        }
+                        .translate-active {
+                            background-position: 0% center;
+                        }
+                    }
+                }     
                 .slider-container {
                     padding-bottom: 40px;
                     position: relative;

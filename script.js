@@ -97,23 +97,115 @@ function validateForm() {
   return true;
 }
 
-$(document).ready(function() {
+  // $(document).ready(function() {
 
-	//E-mail Ajax Send
-	$("form").submit(function() { //Change
-		var th = $(this);
-		$.ajax({
-			type: "POST",
-			url: "mail.php", //Change
-			data: th.serialize()
-		}).done(function() {
-			alert("Thank you!");
-			setTimeout(function() {
-				// Done Functions
-				th.trigger("reset");
-			}, 1000);
-		});
-		return false;
-	});
+  // 	//E-mail Ajax Send
+  // 	$("form").submit(function() { //Change
+  // 		var th = $(this);
+  // 		$.ajax({
+  // 			type: "POST",
+  // 			url: "mail.php", //Change
+  // 			data: th.serialize()
+  // 		}).done(function() {
+  // 			alert("Thank you!");
+  // 			setTimeout(function() {
+  // 				// Done Functions
+  // 				th.trigger("reset");
+  // 			}, 1000);
+  // 		});
+  // 		return false;
+  // 	});
 
-});
+  // });
+
+const translateEN = document.querySelectorAll('.translate-en');
+const translateUA = document.querySelectorAll('.translate-ua');
+
+const allLang = ['ua', 'en'];
+// Отримуємо обраний клас з localStorage
+const selectedLang = localStorage.getItem('selectedLang');
+
+// Позначаємо елемент збереженим класом
+if (selectedLang) {
+  const selectedElement = document.querySelectorAll('.' + selectedLang);
+  if (selectedElement.length > 0) {
+    selectedElement.forEach(element => {
+      element.classList.add('translate-active');
+    })
+  }
+}
+
+translateUA.forEach(element => {
+  element.addEventListener('click', changeURLLanguage);
+})
+translateEN.forEach(element => {
+  element.addEventListener('click', changeURLLanguage);
+})
+
+
+function changeURLLanguage() {
+  // Зберігаємо обраний клас в localStorage
+  localStorage.setItem('selectedLang', this.classList[0]);
+  
+  // Видаляємо клас translate-active у всіх елементів
+  // translateEN.classList.remove('translate-active');
+  // translateUA.classList.remove('translate-active');
+  translateUA.forEach(element => {
+    element.classList.remove('translate-active');
+  })
+  translateEN.forEach(element => {
+    element.classList.remove('translate-active');
+  })
+
+  
+  // Додаємо клас translate-active до обраного елемента
+  this.classList.add('translate-active');
+
+  let lang = this.id;
+  location.href = window.location.pathname + '#' +lang;
+  location.reload();
+}
+
+function changeLanguage() {
+  let getlocalStorage = localStorage.getItem('selectedLang');
+  console.log(getlocalStorage)
+  if(getlocalStorage == 'translate-en') {
+    translateUA.forEach(element => {
+      element.classList.remove('translate-active');
+    })
+    translateEN.forEach(element => {
+      element.classList.add('translate-active');
+    })
+  }
+  if(getlocalStorage == 'translate-ua') {
+    translateEN.forEach(element => {
+      element.classList.remove('translate-active');
+    })
+    translateUA.forEach(element => {
+      element.classList.add('translate-active');
+    })
+  }
+
+  let hash = window.location.hash;
+  hash = hash.substring(1);
+  console.log(hash)
+
+  if(!allLang.includes(hash)) {
+    location.href = window.location.pathname + '#ua';
+    location.reload();
+    localStorage.setItem('selectedLang', 'translate-ua');
+  }
+  document.querySelector('title').innerHTML = langArr['unit'][hash];
+  // document.querySelector('.lng-contact').innerHTML = langArr['contact'][hash];
+  for (let key in langArr) {
+    let elem = document.querySelector('.lng-' + key);
+    // let elem = document.querySelector('.' + key);
+    if(elem) {
+      elem.innerHTML = langArr[key][hash];
+      elem.setAttribute('data-text', elem.innerHTML);
+      elem.setAttribute('placeholder', langArr[key][hash]);
+    }
+    // document.querySelector('lng-' + key).innerHTML = langArr[key][hash];
+  }
+}
+changeLanguage();

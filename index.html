@@ -14,8 +14,7 @@
 <body cz-shortcut-listen="true">
 
     <header>
-        <div class="sticky-header uk-sticky"
-            uk-sticky="top: 200; animation: uk-animation-slide-top">
+        <div class="sticky-header uk-sticky" uk-sticky="top: 200; animation: uk-animation-slide-top">
             <nav class="left-position">
                 <ul>
                     <li><a href="https://www.facebook.com/vector8workshop" uk-icon="icon: facebook; ratio: 1.2"
@@ -45,7 +44,7 @@
             </div>
             <div class="right-position">
                 <div class="hamburger-container">
-                    <a href="tel:+38 (050) 50 300 01" class="simple-button">ЗВ’ЯЗАТИСЬ</a>
+                    <a href="tel:+38 (050) 50 300 01" class="simple-button lng-contact-phone">ЗВ’ЯЗАТИСЬ</a>
                     <div class="hamburger">
                         <div class="hamburger-line"></div>
                     </div>
@@ -61,13 +60,17 @@
                 </div>
                 <nav class="menu-items-holder">
                     <ul uk-scrollspy-nav="closest: li; scroll: true; offset: 70">
-                        <li class="chapter"><a href="#company"><span class="menu-item-number">1</span>КОМПАНІЯ</a></li>
-                        <li class="chapter"><a href="#philosophy"><span class="menu-item-number">2</span>ФІЛОСОФІЯ</a></li>
-                        <li class="chapter"><a href="#production"><span class="menu-item-number">3</span>ВЛАСНЕ ВИРОБНИЦТВО</a>
+                        <li class="chapter"><a href="#company" class="lng-chapter-company"><span
+                                    class="menu-item-number">1</span>КОМПАНІЯ</a></li>
+                        <li class="chapter"><a href="#philosophy" class="lng-chapter-philosophy"><span
+                                    class="menu-item-number">2</span>ФІЛОСОФІЯ</a></li>
+                        <li class="chapter"><a href="#production" class="lng-chapter-production"><span
+                                    class="menu-item-number">3</span>ВЛАСНЕ ВИРОБНИЦТВО</a>
                         </li>
-                        <li class="chapter"><a href="#projects" class="active"><span
+                        <li class="chapter"><a href="#projects" class="active lng-chapter-projects"><span
                                     class="menu-item-number">4</span>ПРОЕКТИ</a></li>
-                        <li class="chapter"><a href="#adress"><span class="menu-item-number">5</span>контакти</a></li>
+                        <li class="chapter"><a href="#adress" class="lng-chapter-adress"><span
+                                    class="menu-item-number">5</span>контакти</a></li>
                     </ul>
                 </nav>
                 <div class="menu-socials-holder">
@@ -90,7 +93,13 @@
                                         d="M10.03,5.45c-2.55,0-4.63,2.06-4.63,4.6c0,2.55,2.07,4.61,4.63,4.61c2.56,0,4.63-2.061,4.63-4.61 C14.65,7.51,12.58,5.45,10.03,5.45L10.03,5.45L10.03,5.45z M10.08,13c-1.66,0-3-1.34-3-2.99c0-1.65,1.34-2.99,3-2.99s3,1.34,3,2.99 C13.08,11.66,11.74,13,10.08,13L10.08,13L10.08,13z">
                                     </path>
                                 </svg></a></li>
+                        <!-- <li class="item-ua"><button id="en" class="translate">EN</button></li> -->
+                        <!-- <li class="item-en"><button id="ua" class="translate">УКР</button></li> -->
                     </ul>
+                    <ul class="languages">
+                        <li class="item-ua"><button id="en" class="translate-en">EN</button></li>
+                        <li class="item-en"><button id="ua" class="translate-ua translate-active">УКР</button></li>
+                    </ul> 
                 </div>
                 <div class="menu-close-button-wrapper">
                     <span uk-icon="icon: close; ratio: 3" class="uk-icon"><svg width="60" height="60"
@@ -135,10 +144,14 @@
 
                 <div class="banner-right-column banner-column">
                     <div class="hamburger-container">
-                        <a href="tel:+38 (050) 00 000 00" class="simple-button">ЗВ’ЯЗАТИСЬ</a>
+                        <a href="tel:+38 (050) 00 000 00" class="simple-button lng-contact">ЗВ’ЯЗАТИСЬ</a>
                         <div class="hamburger">
                             <div class="hamburger-line"></div>
                         </div>
+                        <ul class="languages">
+                            <li class="item-ua"><button id="en" class="translate-en">EN</button></li>
+                            <li class="item-en"><button id="ua" class="translate-ua translate-active">УКР</button></li>
+                        </ul>
                     </div>
                     <div class="slider-container">
                         <div uk-slider="autoplay: true; autoplay-interval: 5000" id="main-slider"
@@ -163,9 +176,10 @@
 
                 <div class="main-text">
                     <h1 class="extra-large-title">VECTOR8</h1>
-                    <h3 class="medium-title">МЕБЛЕВІ ТЕХНОЛОГІЇ<br>НОВОГО ПОКОЛІННЯ</h3>
+                    <h3 class="medium-title lng-medium-title">МЕБЛЕВІ ТЕХНОЛОГІЇ<br>НОВОГО ПОКОЛІННЯ</h3>
                     <div class="main-text-button-wrapper">
-                        <a href="/projects" class="link-with-line">до проектів <span class="line-in-link"></span></a>
+                        <a href="#projects" uk-scroll="offset: 70" class="link-with-line lng-to-projects">до проектів
+                            <span class="line-in-link"></span></a>
                     </div>
                 </div>
 
@@ -192,11 +206,12 @@
 
             <nav class="main-bottom-menu">
                 <ul>
-                    <li><a href="#company" uk-scroll="offset: 70">КОМПАНІЯ</a></li>
-                    <li><a href="#philosophy" uk-scroll="offset: 70">ФІЛОСОФІЯ</a></li>
-                    <li><a href="#production" uk-scroll="offset: 70">ВЛАСНЕ ВИРОБНИЦТВО</a></li>
-                    <li><a href="#projects" uk-scroll="offset: 70">ПРОЕКТИ</a></li>
-                    <li><a href="#adress" uk-scroll="offset: 70">контакти</a></li>
+                    <li><a href="#company" class="lng-menu-company" uk-scroll="offset: 70">КОМПАНІЯ</a></li>
+                    <li><a href="#philosophy" class="lng-menu-philosophy" uk-scroll="offset: 70">ФІЛОСОФІЯ</a></li>
+                    <li><a href="#production" class="lng-menu-production" uk-scroll="offset: 70">ВЛАСНЕ ВИРОБНИЦТВО</a>
+                    </li>
+                    <li><a href="#projects" class="lng-menu-projects" uk-scroll="offset: 70">ПРОЕКТИ</a></li>
+                    <li><a href="#adress" class="lng-menu-adress" uk-scroll="offset: 70">контакти</a></li>
                 </ul>
             </nav>
         </div>
@@ -208,34 +223,36 @@
                 <div uk-grid="" class="uk-grid">
                     <div class="uk-width-1-1 uk-width-1-2@m uk-first-column">
                         <div class="vector-descr-container" uk-scrollspy="inview" style="visibility: hidden;">
-                            <div class="descr-title" data-text="КОМПАНІЯ">КОМПАНІЯ</div>
-                            <div class="descr-description">Молода компанія, яка вже встигла зайняти провідні позиції в сфері меблевих технологій. Успішно реалізуємо найсміливіші проекти із застосуванням сучасних технологій. Впевнені, що немає нічого неможливого!</div>
+                            <div class="descr-title lng-title-company" data-text="КОМПАНІЯ">КОМПАНІЯ</div>
+                            <div class="descr-description lng-descr-company">Молода компанія, яка вже встигла зайняти провідні позиції в
+                                сфері меблевих технологій. Успішно реалізуємо найсміливіші проекти із застосуванням
+                                сучасних технологій. Впевнені, що немає нічого неможливого!</div>
                         </div>
                     </div>
-    
+
                     <div class="uk-width-1-1 uk-width-1-2@m">
                         <div class="vector-img-container" uk-scrollspy="inview" style="visibility: hidden;">
-                            <img src="image/s57STOKLCIMm.png" alt=""> 
-    
+                            <img src="image/s57STOKLCIMm.png" alt="">
+
                             <div class="statistics">
                                 <div class="statistic-item">
                                     <div class="stat-number count" data-value="560">560</div>
-                                    <div class="stat-text">ПРОЕКТІВ</div>
+                                    <div class="stat-text lng-stat-text-project">ПРОЕКТІВ</div>
                                 </div>
-                               
+
                                 <div class="statistic-item">
                                     <div class="stat-number count" data-value="150000">149999</div>
-                                    <div class="stat-text">ВАРТІСТЬ УСТАТКУВАННЯ (€)</div>
+                                    <div class="stat-text lng-stat-text-cost">ВАРТІСТЬ УСТАТКУВАННЯ (€)</div>
                                 </div>
-                                
+
                                 <div class="statistic-item">
                                     <div class="stat-number count" data-value="344">344</div>
-                                    <div class="stat-text">КЛІЄНТІВ</div>
+                                    <div class="stat-text lng-stat-text-customers">КЛІЄНТІВ</div>
                                 </div>
-                                
+
                                 <div class="statistic-item">
                                     <div class="stat-number count" data-value="17">17</div>
-                                    <div class="stat-text">ПАРТНЕРІВ</div>
+                                    <div class="stat-text lng-stat-text-partners">ПАРТНЕРІВ</div>
                                 </div>
                             </div>
                         </div>
@@ -248,19 +265,22 @@
             <div class="vector-block wide" uk-scrollspy="inview">
                 <div class="vertical-line"></div>
                 <div class="dark-layer"></div>
-    
+
                 <div class="vector-descr-container" uk-scrollspy="inview">
-                    <div class="descr-title" data-text="ФІЛОСОФІЯ">ФІЛОСОФІЯ</div>
-                    <div class="descr-description">Створюючи красу стилю, знаємо, як важливо зберегти її на довгі роки, продовжити відчуття новизни і гармонійності інтер’єру!<br>Ми створюємо не меблі, а унікальні естетичні рішення, відображаючі ваші вподобання, характер, індивідуальність.</div>
+                    <div class="descr-title lng-title-philosophy" data-text="ФІЛОСОФІЯ">ФІЛОСОФІЯ</div>
+                    <div class="descr-description lng-descr-philosophy">Створюючи красу стилю, знаємо, як важливо зберегти її на довгі роки,
+                        продовжити відчуття новизни і гармонійності інтер’єру!<br>Ми створюємо не меблі, а унікальні
+                        естетичні рішення, відображаючі ваші вподобання, характер, індивідуальність.</div>
                 </div>
             </div>
         </section>
 
         <section class="vector-block reverse" id="production">
             <div class="uk-container uk-container-large">
-                
-                <div class="vector-title" data-text="ВЛАСНЕ ВИРОБНИЦТВО" uk-scrollspy="inview" style="visibility: hidden;">ВЛАСНЕ ВИРОБНИЦТВО</div>
-    
+
+                <div class="vector-title lng-title-production" data-text="ВЛАСНЕ ВИРОБНИЦТВО" uk-scrollspy="inview"
+                    style="visibility: hidden;">ВЛАСНЕ ВИРОБНИЦТВО</div>
+
                 <div class="vector-block-content">
                     <div uk-grid="" class="uk-grid">
                         <div class="uk-width-1-1 uk-width-1-2@m uk-first-column">
@@ -268,18 +288,21 @@
                                 <img src="image/0DXOek3yPcpQ.png" alt="">
                             </div>
                         </div>
-    
+
                         <div class="uk-width-1-1 uk-width-1-2@m">
                             <div class="vector-descr-container" uk-scrollspy="inview" style="visibility: hidden;">
                                 <div class="descr-description">
-                                    <div>Наявність власного виробництва із сучасним устаткуванням дає змогу виготовлення складних елементів та конструкцій.</div>
-                                    <div class="bold-text">МИ МОЖЕМО ГАРАНТУВАТИ ЗАЯВЛЕНУ ЯКІСТЬ І РЕЗУЛЬТАТ</div>
-                                    <div>Виготовляємо стильні та функціональні меблі, в тому числі м’які і корпусні, різноманітні стінові панелі, міжкімнатні і розсувні двері, гардеробні, кухні, дитячі кімнати, елементи декору та багато іншого.</div>
+                                    <div class="lng-descr-production-one">Наявність власного виробництва із сучасним устаткуванням дає змогу виготовлення
+                                        складних елементів та конструкцій.</div>
+                                    <div class="bold-text lng-descr-production-two">МИ МОЖЕМО ГАРАНТУВАТИ ЗАЯВЛЕНУ ЯКІСТЬ І РЕЗУЛЬТАТ</div>
+                                    <div class="lng-descr-production-three">Виготовляємо стильні та функціональні меблі, в тому числі м’які і корпусні,
+                                        різноманітні стінові панелі, міжкімнатні і розсувні двері, гардеробні, кухні,
+                                        дитячі кімнати, елементи декору та багато іншого.</div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>    
+                </div>
             </div>
         </section>
 
@@ -288,7 +311,7 @@
                 <div class="vertical-line"></div>
                 <div class="dark-layer"></div>
                 <div class="vector-block-inner" uk-scrollspy="inview">
-                    <div class="descr-title" data-text="ПРОЕКТИ">ПРОЕКТИ</div>
+                    <div class="descr-title lng-title-projects" data-text="ПРОЕКТИ">ПРОЕКТИ</div>
                     <div class="project-wrapper-padding">
                         <div uk-slider="" class="uk-slider uk-slider-container">
                             <ul class="uk-slider-items projects-wrapper" uk-scrollspy="inview"
@@ -299,10 +322,10 @@
                                             <img src="image/L9eBxV1ZljQe.jpg" alt="Jack House">
                                         </div>
                                         <div class="item-number">01</div>
-                                        <div class="item-title">Проект «Jack House»</div>
+                                        <div class="item-title lng-project-one">Проект «Jack House»</div>
                                         <a class="detail-link-layer" href="#footer" uk-scroll="offset: 70">
                                             <span class="link-arrow"></span>
-                                            <span class="link-text">детальніше про проект</span>
+                                            <span class="link-text lng-project-one-more">детальніше про проект</span>
                                         </a>
                                     </div>
                                 </li>
@@ -312,10 +335,10 @@
                                             <img src="image/nJEsxz6Q0QGM.jpg" alt="Exotic fusion">
                                         </div>
                                         <div class="item-number">02</div>
-                                        <div class="item-title">Проект «Exotic fusion»</div>
+                                        <div class="item-title lng-project-two">Проект «Exotic fusion»</div>
                                         <a class="detail-link-layer" href="#footer" uk-scroll="offset: 70">
                                             <span class="link-arrow"></span>
-                                            <span class="link-text">детальніше про проект</span>
+                                            <span class="link-text lng-project-two-more">детальніше про проект</span>
                                         </a>
                                     </div>
                                 </li>
@@ -325,10 +348,10 @@
                                             <img src="image/tc6A5BdOS1f7.jpg" alt="Modern minimalist">
                                         </div>
                                         <div class="item-number">03</div>
-                                        <div class="item-title">Проект «Modern minimalist»</div>
+                                        <div class="item-title lng-project-three">Проект «Modern minimalist»</div>
                                         <a class="detail-link-layer" href="#footer" uk-scroll="offset: 70">
                                             <span class="link-arrow"></span>
-                                            <span class="link-text">детальніше про проект</span>
+                                            <span class="link-text lng-project-three-more">детальніше про проект</span>
                                         </a>
                                     </div>
                                 </li>
@@ -342,7 +365,8 @@
                     </div>
                 </div>
                 <div class="vector-block-button-wrapper">
-                    <a href="#footer" uk-scroll="offset: 70" class="link-with-line">дізнатись більше <span class="line-in-link"></span></a>
+                    <a href="#footer" uk-scroll="offset: 70" class="link-with-line lng-learn-more">дізнатись більше <span
+                            class="line-in-link"></span></a>
                 </div>
             </div>
         </section>
@@ -352,13 +376,14 @@
                 <div uk-grid="" class="uk-grid">
                     <div class="uk-width-1-1 uk-width-1-2@m uk-first-column">
                         <div class="vector-descr-container" uk-scrollspy="inview">
-                            <div class="descr-title" data-text="ШОУ-РУМ">ШОУ-РУМ</div>
-                            <div class="descr-description">Познайомитися ближче зі світом Vector8 та відчути якість матеріалів можна в київському шоу-румі за адресою вул. Є.Коновальця 34.</div>
+                            <div class="descr-title lng-title-showroom" data-text="ШОУ-РУМ">ШОУ-РУМ</div>
+                            <div class="descr-description lng-descr-showroom">Познайомитися ближче зі світом Vector8 та відчути якість
+                                матеріалів можна в київському шоу-румі за адресою вул. Є.Коновальця 34.</div>
                         </div>
                     </div>
                     <div class="uk-width-1-1 uk-width-1-2@m">
                         <div class="vector-img-container" uk-scrollspy="inview">
-                            <img src="image/3PSvLF3kaZUz.png" alt=""> 
+                            <img src="image/3PSvLF3kaZUz.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -370,17 +395,18 @@
                 <div class="uk-grid-large uk-grid uk-grid-stack" uk-grid="">
                     <div class="uk-width-1-1 uk-width-3-5@m uk-first-column uk-grid-margin">
                         <div class="about-company-text-holder">
-                            <p>«Виготовлення та продаж меблів? Ні, Vector8 – це набагато більше. Це історія про щось особисто ваше, з характером та емоціями. І, повірте, це не пусті слова.</p>
-                            <p>Успіх кожного втіленого проекту полягає в унікальному підході, метою якого є створення затишного комфортного простору з урахуванням усіх звичок, уподобань та побажань замовника. На початковому етапі співпраці наші спеціалісти ретельно вивчають найдрібніші деталі вашого побуту, котрі на перший погляд здаються незначними.</p>
-                            <p>Ураховуючи все це, а також психологію та ергономіку руху людини, команда Vector8 створює оптимальний для вас варіант проекту, аби згодом почути найважливіше – вдячний відгук клієнта: «Тепер це місце моєї сили!»</p>
-                            <p class="vector-hidden-800"><span class="signature-name">Ірина Кондратюк</span><br><span class="signature-position">засновник та керівник меблевої компанії Vector8</span></p>
+                            <p class="lng-about-1">Виготовлення та продаж меблів? Ні, Vector8 – це набагато більше. Це історія про щось особисто ваше, з характером та емоціями. І, повірте, це не пусті слова.</p>
+                            <p class="lng-about-2">Успіх кожного втіленого проекту полягає в унікальному підході, метою якого є створення затишного комфортного простору з урахуванням усіх звичок, уподобань та побажань замовника. На початковому етапі співпраці наші спеціалісти ретельно вивчають найдрібніші деталі вашого побуту, котрі на перший погляд здаються незначними.</p>
+                            <p class="lng-about-3">Ураховуючи все це, а також психологію та ергономіку руху людини, команда Vector8 створює оптимальний для вас варіант проекту, аби згодом почути найважливіше – вдячний відгук клієнта: «Тепер це місце моєї сили!»</p>
+                            <p class="vector-hidden-800"><span class="signature-name  lng-about-4">Ірина Кондратюк</span><br><span class="signature-position lng-about-5">засновник та керівник меблевої компанії Vector8</span>
+                            </p>
                         </div>
                     </div>
                     <div class="uk-width-1-1 uk-width-2-5@m">
                         <div class="about-company-image-holder">
                             <img src="image/tmCmVH4cnJKV.png" alt="">
                             <div class="foto-descr-layer">
-                                <p><span class="signature-name">Ірина Кондратюк</span><br><span class="signature-position">засновник та керівник меблевої компанії Vector8</span></p>
+                                <p><span class="signature-name lng-about-4-phone">Ірина Кондратюк</span><br><span class="signature-position lng-about-5-phone">засновник та керівник меблевої компанії Vector8</span></p>
                             </div>
                         </div>
                     </div>
@@ -398,35 +424,37 @@
                             <div class="contacts-wrapper-inner">
                                 <div class="uk-child-width-1-1 uk-child-width-1-2@l uk-grid-small uk-grid" uk-grid="">
                                     <div class="uk-first-column">
-                                        <div class="contacts-title">Наші контакти</div>
-                                        <div class="contacts-row"><a href="mailto:info@vector8.com.ua">info@vector8.com.ua</a>
+                                        <div class="contacts-title lng-title-contacts">Наші контакти</div>
+                                        <div class="contacts-row"><a
+                                                href="mailto:info@vector8.com.ua">info@vector8.com.ua</a>
                                         </div>
-        
-                                        <div class="contacts-row"><a href="tel:+38 (050) 50 300 01">+38 (050) 50 300 01</a>
+
+                                        <div class="contacts-row"><a href="tel:+38 (050) 50 300 01">+38 (050) 50 300
+                                                01</a>
                                         </div>
-        
-                                        <div class="contacts-row">вул. Євгена Коновальця, 34а</div>
-        
-                                        <div class="contacts-row">Київ, Україна</div>
+
+                                        <div class="contacts-row lng-row-1">вул. Євгена Коновальця, 34а</div>
+
+                                        <div class="contacts-row lng-row-2">Київ, Україна</div>
                                     </div>
                                     <div class="">
-                                        <div class="contacts-title">Соцмережі</div>
+                                        <div class="contacts-title lng-networks">Соцмережі</div>
                                         <div class="footer-social-block">
                                             <ul>
                                                 <li><a href="https://www.facebook.com/vector8workshop"
-                                                        uk-icon="icon: facebook; ratio: 1.2" class="uk-icon"><svg width="24"
-                                                            height="24" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
-                                                            data-svg="facebook">
+                                                        uk-icon="icon: facebook; ratio: 1.2" class="uk-icon"><svg
+                                                            width="24" height="24" viewBox="0 0 20 20"
+                                                            xmlns="http://www.w3.org/2000/svg" data-svg="facebook">
                                                             <path
                                                                 d="M11,10h2.6l0.4-3H11V5.3c0-0.9,0.2-1.5,1.5-1.5H14V1.1c-0.3,0-1-0.1-2.1-0.1C9.6,1,8,2.4,8,5v2H5.5v3H8v8h3V10z">
                                                             </path>
                                                         </svg></a></li>
-        
-        
+
+
                                                 <li><a href="https://www.instagram.com/vector8_workshop/"
-                                                        uk-icon="icon: instagram; ratio: 1.2" class="uk-icon"><svg width="24"
-                                                            height="24" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
-                                                            data-svg="instagram">
+                                                        uk-icon="icon: instagram; ratio: 1.2" class="uk-icon"><svg
+                                                            width="24" height="24" viewBox="0 0 20 20"
+                                                            xmlns="http://www.w3.org/2000/svg" data-svg="instagram">
                                                             <path
                                                                 d="M13.55,1H6.46C3.45,1,1,3.44,1,6.44v7.12c0,3,2.45,5.44,5.46,5.44h7.08c3.02,0,5.46-2.44,5.46-5.44V6.44 C19.01,3.44,16.56,1,13.55,1z M17.5,14c0,1.93-1.57,3.5-3.5,3.5H6c-1.93,0-3.5-1.57-3.5-3.5V6c0-1.93,1.57-3.5,3.5-3.5h8 c1.93,0,3.5,1.57,3.5,3.5V14z">
                                                             </path>
@@ -442,53 +470,51 @@
                             </div>
                         </div>
                         <div class="contacts-wrapper">
-                            <iframe id="footer-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2541.7392939342044!2d30.52833258863162!3d50.427328815779795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf10225cd4ff%3A0x11bc57492adfea5f!2z0LLRg9C70LjRhtGPINCE0LLQs9C10L3QsCDQmtC-0L3QvtCy0LDQu9GM0YbRjywgMzTQkCwg0JrQuNGX0LIsIDAxMTMz!5e0!3m2!1suk!2sua!4v1695320188736!5m2!1suk!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe id="footer-map"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2541.7392939342044!2d30.52833258863162!3d50.427328815779795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf10225cd4ff%3A0x11bc57492adfea5f!2z0LLRg9C70LjRhtGPINCE0LLQs9C10L3QsCDQmtC-0L3QvtCy0LDQu9GM0YbRjywgMzTQkCwg0JrQuNGX0LIsIDAxMTMz!5e0!3m2!1suk!2sua!4v1695320188736!5m2!1suk!2sua"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
-                        </div>
+                    </div>
                     <div class="uk-width-1-1 uk-width-1-2@m">
                         <div class="main-footer-form-wrapper">
-                            <div class="footer-form-title">Зв'язатись з нами</div>
+                            <div class="footer-form-title lng-title-form">Зв'язатись з нами</div>
                             <form id="w0" enctype="multipart/form-data" onsubmit="return validateForm()">
-
-                                <!-- Hidden Required Fields -->
-                                <input type="hidden" name="project_name" value="Vector7">
-                                <input type="hidden" name="admin_email" value="smus.andriy@gmail.com">
-                                <input type="hidden" name="form_subject" value="Form footer">
-                                <!-- END Hidden Required Fields -->
-
-                                <input type="hidden" name="_csrf"
-                                    value="wmUZPJ2rS8xey_eI0x8VaipwjfkAwS9dMp-cmdI5AcKWXFhs8vImuw2hwMSRWFYoTijKiWaobhFY0KuuqldytQ==">
+                                <!-- <input type="hidden" name="_csrf"
+                                    value="wmUZPJ2rS8xey_eI0x8VaipwjfkAwS9dMp-cmdI5AcKWXFhs8vImuw2hwMSRWFYoTijKiWaobhFY0KuuqldytQ=="> -->
                                 <div class="uk-grid-large uk-grid" uk-grid="">
                                     <div class="uk-width-1-1 uk-width-1-2@m uk-first-column">
                                         <div class="form-group field-contactform-name required">
-                                            <label class="control-label" for="contactform-name">Ім'я</label>
-                                            <input type="text" id="contactform-name" class="form-control"
+                                            <label class="control-label lng-form-name" for="contactform-name">Ім'я</label>
+                                            <input type="text" id="contactform-name" class="form-control lng-form-control-name"
                                                 name="ContactForm[name]" placeholder="Ваше ім'я" aria-required="true">
-                                                <div class="error-name">Необхідно заповнити "Імя".</div>
+                                            <div class="error-name lng-error-name">Необхідно заповнити «Ім'я».</div>
                                         </div>
                                     </div>
-        
+
                                     <div class="uk-width-1-1 uk-width-1-2@m">
                                         <div class="form-group field-contactform-email required">
-                                            <label class="control-label" for="contactform-email">Email</label>
-                                            <input type="text" id="contactform-email" class="form-control"
-                                                name="ContactForm[email]" placeholder="Ваша Email адреса" aria-required="true">
-                                            <div class="error-email">Необхідно заповнити "Email".</div>
+                                            <label class="control-label lng-form-email" for="contactform-email">Email</label>
+                                            <input type="text" id="contactform-email" class="form-control lng-form-control-email"
+                                                name="ContactForm[email]" placeholder="Ваша Email адреса"
+                                                aria-required="true">
+                                            <div class="error-email lng-error-email">Необхідно заповнити "Email".</div>
                                         </div>
                                     </div>
-        
+
                                     <div class="uk-width-1-1 uk-grid-margin">
                                         <div class="form-group field-contactform-message">
-                                            <label class="control-label" for="contactform-message">Повідомлення</label>
-                                            <textarea id="contactform-message" class="form-control" name="ContactForm[message]"
-                                                rows="3" placeholder="Ваше повідомлення"></textarea>
+                                            <label class="control-label lng-form-message" for="contactform-message">Повідомлення</label>
+                                            <textarea id="contactform-message" class="form-control lng-form-control-message"
+                                                name="ContactForm[message]" rows="3"
+                                                placeholder="Ваше повідомлення"></textarea>
                                             <div class="help-block"></div>
                                         </div>
                                     </div>
-        
+
                                     <div class="button-wrapper uk-grid-margin uk-first-column">
-                                        <button type="submit" class="btn btn-success">Надіслати<span
-                                            class="line"></span></button>
+                                        <button type="submit" class="btn btn-success lng-send">Надіслати<span
+                                                class="line"></span></button>
                                     </div>
                                 </div>
                             </form>
@@ -517,6 +543,7 @@
     <!-- <script src="/js/main-menu.js"></script> -->
     <!-- <script src="/js/preloader.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="lang.js"></script>
     <script src="script.js"></script>
     <!-- <script>jQuery(function ($) {
             jQuery('#w0').yiiActiveForm([{ "id": "contactform-name", "name": "name", "container": ".field-contactform-name", "input": "#contactform-name", "validate": function (attribute, value, messages, deferred, $form) { yii.validation.required(value, messages, { "message": "Необхідно заповнити \"Імя\"." }); } }, { "id": "contactform-email", "name": "email", "container": ".field-contactform-email", "input": "#contactform-email", "validate": function (attribute, value, messages, deferred, $form) { yii.validation.required(value, messages, { "message": "Необхідно заповнити \"Email\"." }); yii.validation.email(value, messages, { "pattern": /^[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$/, "fullPattern": /^[^@]*<[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?>$/, "allowName": false, "message": "Значення \u0022Email\u0022 не є правильною email адресою.", "enableIDN": false, "skipOnEmpty": 1 }); } }, { "id": "contactform-message", "name": "message", "container": ".field-contactform-message", "input": "#contactform-message", "validate": function (attribute, value, messages, deferred, $form) { value = yii.validation.trim($form, attribute, [], value); } }], []);

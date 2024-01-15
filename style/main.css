@@ -246,6 +246,10 @@ header .side-menu .menu-container .menu-items-holder ul li.uk-active a {
 header .side-menu .menu-container .menu-items-holder ul li:not(:last-child) {
   margin-bottom: 45px;
 }
+header .side-menu .menu-container .menu-socials-holder {
+  display: flex;
+  justify-content: space-between;
+}
 header .side-menu .menu-container .menu-socials-holder ul {
   padding: 0;
   margin: 0;
@@ -300,6 +304,36 @@ header .side-menu.active .menu-container .menu-socials-holder ul li {
   opacity: 1;
   transform: translateX(0%);
   transition-delay: 1.3s;
+}
+header .side-menu.active .menu-container .languages {
+  list-style-type: none;
+  padding: 0 0 0 30px;
+}
+header .side-menu.active .menu-container .languages li {
+  display: inline-block;
+}
+header .side-menu.active .menu-container .languages li .translate-en, header .side-menu.active .menu-container .languages li .translate-ua {
+  cursor: pointer;
+  width: 40px;
+  border: none;
+  background: none;
+  color: #939391;
+  font-family: "MuseoSansCyrl-900";
+  background: linear-gradient(45deg, #fff 0%, #fff 50%, #939391 50%, #939391 100%);
+  background-size: 220% auto;
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-position: 100% center;
+}
+header .side-menu.active .menu-container .languages li .translate-en:hover, header .side-menu.active .menu-container .languages li .translate-ua:hover {
+  background-position: 0% center;
+}
+header .side-menu.active .menu-container .languages li .translate-active {
+  background-position: 0% center;
+}
+header .side-menu.active .menu-container .languages li:not(:last-child) {
+  margin-right: 20px;
 }
 header .side-menu.active .menu-container .menu-close-button-wrapper {
   opacity: 1;
@@ -375,6 +409,34 @@ header .outer-indent .main-banner .banner-right-column {
   flex-direction: column;
   justify-content: space-between;
   transition-delay: 0.2s;
+}
+header .outer-indent .main-banner .banner-right-column .languages {
+  list-style-type: none;
+  padding: 0 0 0 30px;
+}
+header .outer-indent .main-banner .banner-right-column .languages li {
+  display: inline-block;
+}
+header .outer-indent .main-banner .banner-right-column .languages li .translate-en, header .outer-indent .main-banner .banner-right-column .languages li .translate-ua {
+  cursor: pointer;
+  font-size: 18px;
+  width: 45px;
+  border: none;
+  background: none;
+  color: #939391;
+  font-family: "MuseoSansCyrl-900";
+  background: linear-gradient(45deg, #fff 0%, #fff 50%, #939391 50%, #939391 100%);
+  background-size: 220% auto;
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-position: 100% center;
+}
+header .outer-indent .main-banner .banner-right-column .languages li .translate-en:hover, header .outer-indent .main-banner .banner-right-column .languages li .translate-ua:hover {
+  background-position: 0% center;
+}
+header .outer-indent .main-banner .banner-right-column .languages li .translate-active {
+  background-position: 0% center;
 }
 header .outer-indent .main-banner .banner-right-column .slider-container {
   padding-bottom: 40px;
